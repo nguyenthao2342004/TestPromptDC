@@ -87,6 +87,15 @@ def main(args):
             for epoch in range(args.epochs):               
                 new_rgb = rgb_uni + visual_prompt
                 pre_depth_ = foundation_model({'image': new_rgb, 'depth': sparse_depth}, {})['depth']
+
+                # === CODE TỰ ĐỘNG CHÈN ĐỂ LƯU ẢNH ===
+                import matplotlib.pyplot as plt
+                # Lấy kết quả ra khỏi GPU và chuyển thành ảnh
+                temp_result = pre_depth_.detach().cpu().squeeze().numpy()
+                # Lưu ảnh với màu 'magma' (đen-tím-cam-vàng) cho đẹp
+                plt.imsave('ket_qua_cuoi_cung.png', temp_result, cmap='magma')
+                print('\n📸 ĐÃ CHỤP VÀ LƯU ẢNH: ket_qua_cuoi_cung.png')
+                # =======================================
                 
                 scale, shift = compute_scale_and_shift(pre_depth_, sparse_depth)    
                 pre_depth = pre_depth_ * scale + shift    
