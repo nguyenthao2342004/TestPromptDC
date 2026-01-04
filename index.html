@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Dự án TestPromptDC</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; color: #333; background-color: #f4f7f9; }
+        header { background: white; border-bottom: 4px solid #007bff; padding: 25px; border-radius: 10px 10px 0 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        h1 { color: #007bff; margin: 0; font-size: 28px; }
+        .info-section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        h3 { border-left: 5px solid #007bff; padding-left: 10px; color: #333; margin-top: 0; }
+        
+        /* Style cho bảng kết quả */
+        .result-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .result-table th, .result-table td { border: 1px solid #dee2e6; padding: 12px; text-align: left; }
+        .result-table th { background-color: #e9ecef; color: #495057; }
+        .metric-name { font-weight: bold; color: #0056b3; }
+        .value { font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #d63384; }
+        
+        .status { color: #28a745; font-weight: bold; background: #e8f5e9; padding: 4px 12px; border-radius: 20px; font-size: 0.9em; }
+        .footer { text-align: center; margin-top: 50px; padding: 20px; color: #777; font-size: 0.9em; border-top: 1px solid #ddd; }
+        a { color: #007bff; text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dự án: TestPromptDC</h1>
+        <p><b>Sinh viên thực hiện:</b> Nguyễn Thị Phương Thảo</p>
+        <p><b>Mã số sinh viên:</b> 2251162158</p>
+    </header>
+
+    <div class="info-section">
+        <h3>📊 Báo cáo kết quả đánh giá (Final Evaluation)</h3>
+        <p>Dưới đây là các chỉ số đạt được sau quá trình thực thi mô hình với phương pháp MapReduce:</p>
+        
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>Chỉ số (Metrics)</th>
+                    <th>Giá trị (Value)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="metric-name">Global Avg MAE (Sai số tuyệt đối trung bình)</td>
+                    <td class="value">0.3181803591</td>
+                </tr>
+                <tr>
+                    <td class="metric-name">Global Avg RMSE (Sai số bình phương trung bình)</td>
+                    <td class="value">0.4720213177</td>
+                </tr>
+             
+            </tbody>
+        </table>
+    </div>
+
+    <div class="info-section">
+        <h3>📂 Thông tin dự án</h3>
+        <p>Dự án sử dụng mô hình <b>Unidepth</b> để xử lý dữ liệu hình ảnh, kết hợp với framework tự xây dựng dựa trên tư tưởng <b>MapReduce</b> để tối ưu hóa hiệu năng tính toán.</p>
+        <p>Trạng thái hệ thống: <span class="status">Hoàn thành đánh giá ✅</span></p>
+    </div>
+
+    <div class="info-section">
+        <h3>🔗 Liên kết quan trọng</h3>
+        <ul>
+            <li><b>Mã nguồn đầy đủ:</b> <a href="https://github.com/nguyenthao2342004/TestPromptDC" target="_blank">GitHub Repository</a></li>
+            <li><b>Dữ liệu (Data):</b> Nằm trong thư mục <code>data_test</code> của repository.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        © 2024 - Báo cáo bài tập lớn | Thực hiện bởi Nguyễn Thị Phương Thảo
+    </div>
+</body>
+</html>
